@@ -1,0 +1,870 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 1.4rem 0;
+  background-color: #fff;
+}
+
+body.background-dark-mode header {
+  background-color: #1a1525;
+}
+
+header .navbar {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navbar .menu {
+  display: flex;
+  gap: 2rem;
+}
+
+header .navbar .menu li {
+  list-style: none;
+}
+
+header .navbar .menu li a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+
+body.background-dark-mode header .navbar .menu li a {
+  color: #fff;
+}
+
+header .navbar .menu li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #4839f4;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transition: 0.3s;
+}
+
+header .navbar .menu li a:hover::after {
+  width: 100%;
+  right: 0;
+}
+
+header .navbar .menu .moon {
+  cursor: pointer;
+}
+
+body.background-dark-mode header .navbar .menu .moon {
+  color: #fff;
+}
+
+header .hamburger {
+  display: none;
+}
+
+.background-dark-mode {
+  background-color: #1a1525;
+}
+
+.logo {
+  color: #000;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+body.background-dark-mode .logo {
+  color: #fff;
+}
+
+main {
+  width: 80%;
+  margin: 1rem auto;
+  position: relative;
+}
+
+main section {
+  scroll-margin-top: 4rem;
+}
+
+main .sec-hello {
+  margin: 6rem 0;
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .sec-hello .i-am {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+main .sec-hello .i-am .title {
+  font-size: 4rem;
+}
+
+body.background-dark-mode main .sec-hello .i-am .title {
+  color: #fff;
+}
+
+main .sec-hello .i-am .title span {
+  color: #4839f4;
+}
+
+main .background-image-circle {
+  width: 22rem;
+  height: 22.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: #4839f4;
+  position: relative;
+  overflow: hidden;
+}
+
+main .background-image-circle img {
+  width: 22rem;
+  height: 20rem;
+  border-radius: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+}
+
+main .btn-primary {
+  padding: 1rem 1.6rem;
+  color: #fff;
+  background-color: #4839f4;
+  border: 2px solid #4839f4;
+  border-radius: 0.4rem;
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+main .btn-primary:hover {
+  color: #4839f4;
+  background: transparent;
+}
+
+main .subtitle,
+main .sec-title {
+  text-align: center;
+  color: #4839f4;
+}
+
+main .subtitle {
+  margin-top: 3rem;
+  font-weight: 300;
+}
+
+main .sec-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+main .sec-about-me {
+  margin: 6rem 0;
+}
+
+main .sec-about-me .subtitle {
+  padding-top: 1.3rem;
+}
+
+main .sec-about-me .about-me {
+  margin: 6rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+main .sec-about-me .about-me .background-image-rectangle {
+  width: 22rem;
+  height: 28rem;
+  background-color: #4839f4;
+  border-radius: 0.6rem;
+  display: flex;
+}
+
+main .sec-about-me .about-me .background-image-rectangle img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-left: 0.8rem;
+}
+
+main .sec-about-me .about-me .desc {
+  width: 45%;
+}
+
+main .sec-about-me .about-me .desc .desc-title {
+  font-size: 2rem;
+}
+
+body.background-dark-mode main .sec-about-me .about-me .desc .desc-title {
+  color: #fff;
+}
+
+main .sec-about-me .about-me .desc .desc-about-me {
+  margin: 1rem 0;
+  width: 85%;
+  color: #6c6c6c;
+  font-size: 1.6rem;
+}
+
+main .sec-skills {
+  margin: 6rem 0;
+}
+
+main .sec-skills .subtitle {
+  padding-top: 3.5rem;
+}
+
+main .sec-skills .skills-features {
+  margin: 6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .sec-skills .skills-features .skills {
+  width: 50%;
+  height: 100%;
+  margin-top: 1.4rem;
+}
+
+main .sec-skills .skills-features .skills .skills-feature {
+  display: flex;
+  justify-content: space-between;
+}
+
+body.background-dark-mode main .sec-skills .skills-features .skills .skills-feature h3 {
+  color: #fff;
+}
+
+main .sec-skills .skills-features .skills .progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #bfbafc;
+  border-radius: 1rem;
+  margin: 0.4rem 0 2rem;
+  overflow: hidden;
+}
+
+main .sec-skills .skills-features .skills .progress-bar .percentage {
+  height: 0.5rem;
+  border-radius: 1rem;
+  background-color: #4839f4;
+}
+
+/* 
+@keyframes barAnimatedHTML {
+  to {
+    transform: translateX(70%);
+  }
+} */
+
+main .sec-skills .skills-features .skills .progress-bar .percentage-html {
+  width: 70%;
+}
+
+/* @keyframes barAnimatedCSS {
+  to {
+    transform: translateX(40%);
+  }
+} */
+
+main .sec-skills .skills-features .skills .progress-bar .percentage-css {
+  width: 40%;
+}
+
+/* @keyframes barAnimatedJS {
+  to {
+    transform: translateX(10%);
+  }
+} */
+
+main .sec-skills .skills-features .skills .progress-bar .percentage-javaScript {
+  width: 10%;
+}
+
+/* @keyframes barAnimatedReact {
+  to {
+    transform: translateX(2%);
+  }
+} */
+
+main .sec-skills .skills-features .skills .progress-bar .percentage-react {
+  width: 2%;
+}
+
+main .works {
+  margin: 7rem 0;
+}
+
+main .works .subtitle {
+  padding-top: 3.5rem;
+}
+
+main .works .projects {
+  margin: 6rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+main .works .projects .project {
+  width: 16rem;
+  height: 10rem;
+  border-radius: 0.8rem;
+  background-image: url(/img/abbzt6kmkawmpbj7evxx.webp);
+  background-size: cover;
+  filter: grayscale(1);
+}
+
+main .works .projects .project:hover {
+  filter: grayscale(0);
+  transition: 0.3s;
+}
+
+main .works .projects .project .overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+main .works .projects .project .overlay:hover {
+  opacity: 1;
+}
+
+main .works .projects .project .overlay .overlay-items {
+  width: 100%;
+  display: flex;
+  padding: 0.2rem;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+main .works .projects .project .overlay .overlay-items .items {
+  color: #fff;
+  font-size: 2rem;
+}
+
+main .works .projects .project .overlay .overlay-items .items:hover {
+  color: #4839f4;
+  transition: 0.2s;
+}
+
+main .connect {
+  margin: 7rem 0;
+}
+
+main .connect .subtitle {
+  padding-top: 3.5rem;
+}
+
+main .connect .contact {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+main .connect .contact .contact-left .contact-me {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+main .connect .contact .contact-left .contact-me i {
+  margin-right: 0.6rem;
+  font-size: 1.2rem;
+  color: #4839f4;
+}
+
+body.background-dark-mode main .connect .contact .contact-left .contact-me h5,
+body.background-dark-mode main .connect .contact .contact-left .contact-me p {
+  color: #fff;
+}
+
+main .connect .contact .contact-left .contact-me h5 {
+  font-size: 0.8rem;
+}
+
+main .connect .contact .contact-left .contact-me p {
+  font-size: 0.6rem;
+  font-weight: 300;
+}
+
+main .connect .contact .contact-right {
+  width: 50%;
+}
+
+main .connect .contact .contact-right .contact-inputs-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+main .connect .contact .contact-right .contact-inputs-container form .inputs {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+main .connect .contact .contact-right .contact-inputs-container form .inputs .first-name {
+  width: 60%;
+}
+
+main .connect .contact .contact-right .contact-inputs-container form .inputs .mail {
+  width: 60%;
+}
+
+main .connect .contact .contact-right .contact-inputs-container form .inputs input {
+  border-radius: 0.6rem;
+  border: 1px solid #6c6c6c;
+  padding: 1rem;
+}
+
+main .connect .contact .contact-right .contact-inputs-container form textarea {
+  resize: none;
+  border-radius: 0.6rem;
+  padding: 1rem;
+}
+
+main .connect .contact .contact-right .contact-inputs-container form .button {
+  margin-top: 1rem;
+}
+
+main .up {
+  position: absolute;
+  bottom: -4rem;
+  right: 0;
+}
+
+main .up a {
+  color: #000;
+}
+
+body.background-dark-mode main .up a {
+  color: #fff;
+}
+
+main .up i {
+  font-size: 2rem;
+}
+
+main .up i:hover {
+  color: #4839f4;
+  transition: 0.3s;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+}
+
+footer {
+  width: 100%;
+  background-color: #4839f4;
+}
+
+footer .sec-footer {
+  width: 80%;
+  height: 8rem;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .sec-footer .aside-logo a {
+  color: #fff;
+}
+
+footer .sec-footer .aside-logo h3 {
+  margin-top: 0.6rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+footer .sec-footer aside .menu {
+  display: flex;
+  gap: 2rem;
+}
+
+footer .sec-footer aside .menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .sec-footer aside .menu-emojis {
+  gap: 0.5rem;
+}
+
+footer .sec-footer aside .menu-emojis i {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  main .sec-hello .i-am .title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  main .sec-hello .i-am .title span {
+    color: #4839f4;
+  }
+
+  main .sec-hello .background-image-circle {
+    width: 17rem;
+    height: 17.2rem;
+  }
+
+  main .sec-hello .background-image-circle img {
+    width: 20rem;
+    height: 18rem;
+  }
+
+  main .sec-about-me .about-me {
+    margin: 6rem auto;
+    width: 80%;
+    gap: 4rem;
+  }
+
+  main .sec-about-me .about-me .background-image-rectangle {
+    width: 16rem;
+    height: 22rem;
+  }
+
+  main .sec-about-me .about-me .desc {
+    width: 55%;
+  }
+
+  main .sec-about-me .about-me .desc .desc-title {
+    font-size: 1.4rem;
+  }
+
+  main .sec-about-me .about-me .desc .desc-about-me {
+    font-size: 1rem;
+  }
+
+  main .sec-skills .skills-features {
+    justify-content: center;
+  }
+
+  main .sec-skills .skills-features .background-image-circle {
+    display: none;
+  }
+
+  main .sec-skills .skills-features .skills {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  main .works .projects {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  main .works .projects .project .overlay {
+    opacity: 1;
+  }
+
+  main .connect {
+    margin: 7rem 0;
+  }
+
+  main .connect .subtitle {
+    padding-top: 3.5rem;
+  }
+
+  main .connect .contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  main .connect .contact .contact-left {
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  main .connect .contact .contact-right {
+    width: 85%;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  footer .sec-footer aside .menu {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  footer .sec-footer aside .menu a {
+    text-decoration: none;
+  }
+
+  footer .sec-footer aside .menu-emojis {
+    gap: 0.5rem;
+  }
+
+  footer .sec-footer aside .menu-emojis i {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 577px) {
+
+  header .navbar .menu {
+    height: 100vh;
+    width: 65%;
+    flex-direction: column;
+    background-color: #1a1525;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8.4rem 2rem 0;
+    text-align: center;
+    transform: translateX(-101%);
+    transition: 0.3s;
+  }
+
+  header .navbar .menu-visible {
+    transform: translateX(0%);
+    transition: 0.3s;
+  }
+
+  body.background-dark-mode header .navbar .menu {
+    background-color: #fff;
+  }
+
+  header .navbar .menu .moon {
+    cursor: pointer;
+  }
+
+  body.background-dark-mode header .navbar .menu .moon {
+    color: #1a1525;
+  }
+
+  header .navbar .menu li {
+    color: #fff;
+  }
+
+  body.background-dark-mode header .navbar .menu li {
+    color: #1a1525;
+  }
+
+  header .navbar .menu li a {
+    color: #fff;
+  }
+
+  body.background-dark-mode header .navbar .menu li a {
+    color: #1a1525;
+  }
+
+
+
+  header .hamburger {
+    display: block;
+  }
+
+  header .hamburger i {
+    font-size: 1.4rem;
+  }
+
+  body.background-dark-mode header .hamburger i {
+    color: #fff;
+  }
+
+  main .sec-hello {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30rem;
+  }
+
+  main .sec-hello .i-am {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  main .sec-hello .i-am .title {
+    font-size: 1.6rem;
+  }
+
+  body.background-dark-mode main .sec-hello .i-am .title {
+    color: #fff;
+  }
+
+  main .sec-hello .i-am .title span {
+    color: #4839f4;
+  }
+
+  main .sec-hello .background-image-circle {
+    margin-top: 1rem;
+    order: 0;
+    width: 12rem;
+    height: 22rem;
+  }
+
+  main .sec-hello .background-image-circle img {
+    width: 14rem;
+    height: 12rem;
+  }
+
+  main .sec-about-me {
+    margin: 6rem 0;
+  }
+
+  main .sec-about-me .subtitle {
+    padding-top: 1.3rem;
+  }
+
+  main .sec-about-me .about-me {
+    width: 100%;
+  }
+
+  main .sec-about-me .about-me .background-image-rectangle {
+    display: none;
+  }
+
+  main .sec-about-me .about-me .background-image-rectangle img {
+    display: none;
+  }
+
+  main .sec-about-me .about-me .desc {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  main .sec-about-me .about-me .desc .desc-title {
+    font-size: 2rem;
+  }
+
+  main .sec-about-me .about-me .desc .desc-about-me {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+  main .connect .contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  main .connect .contact .contact-left {
+    width: 85%;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  main .connect .contact .contact-right {
+    width: 85%;
+  }
+
+  main .connect .contact .contact-right .contact-inputs-container form {
+    width: 100%;
+  }
+
+  main .connect .contact .contact-right .contact-inputs-container form .inputs {
+    flex-direction: column;
+  }
+
+  main .connect .contact .contact-right .contact-inputs-container form .inputs .first-name {
+    width: 100%;
+  }
+
+  main .connect .contact .contact-right .contact-inputs-container form .inputs .mail {
+    width: 100%;
+  }
+
+  main .connect .contact .contact-right .contact-inputs-container form input {
+    width: 100%;
+  }
+
+  main .connect .contact .contact-right textarea {
+    margin-top: 4.3rem;
+  }
+
+  main .up {
+    bottom: -4.5rem;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  footer .sec-footer {
+    width: 80%;
+    height: 16rem;
+    padding: 4rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .sec-footer aside .menu {
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  footer .sec-footer aside .menu-emojis {
+    margin-top: 1rem;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}
